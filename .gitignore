@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+
+# Streamlit cache
+.streamlit/
+
+# Reports / generated files
+*.pdf
+*.xlsx
+*.docx
+
+# IDE files
+.vscode/
+.idea/
+*.iml
