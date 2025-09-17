@@ -42,11 +42,9 @@ def generate_pdf(template_choice, df):
             pdf.cell(40, 10, safe_text(value), 1)
         pdf.ln()
 
-    # Save to buffer
-    buffer = BytesIO()
-    pdf.output(buffer)
-    buffer.seek(0)
-    return buffer
+    # ✅ FIX: Return PDF bytes instead of writing to file
+    pdf_bytes = pdf.output(dest="S").encode("latin-1")
+    return BytesIO(pdf_bytes)
 
 
 # Streamlit UI
